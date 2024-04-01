@@ -13,7 +13,7 @@ Status: we are still organizing the code for readability currently :)
 - openmp >= 201511
 - numba 0.54.1
 
-Compile C++ temporal sampler first with the following command
+Compile C++ temporal sampler (from TGL) first with the following command
 > python SIMPLE/setup.py build_ext --inplace
 
 ## Datasets
