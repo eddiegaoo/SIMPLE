@@ -1,5 +1,4 @@
 # SIMPLE
-Status: we are still organizing the code for readability currently :) 
 ## Requirements
 - python >= 3.6.13
 - pytorch >= 1.8.1
