@@ -1,5 +1,6 @@
 # SIMPLE
-Code repository for the SIGMOD 24 paper: SIMPLE: Efficient Temporal Graph Neural Network Training at Scale with Dynamic Data Placement.
+Code repository for the SIGMOD 24 paper:
+"SIMPLE: Efficient Temporal Graph Neural Network Training at Scale with Dynamic Data Placement"
 ## Requirements
 - python >= 3.6.13
 - pytorch >= 1.8.1
