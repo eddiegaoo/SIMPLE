@@ -22,6 +22,7 @@ import numpy as np
 from SIMPLE.trainer import *
 from SIMPLE.data_processing import *
 from SIMPLE.sampler import *
+from SIMPLE.memory_module import *
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 def set_seed(seed):
