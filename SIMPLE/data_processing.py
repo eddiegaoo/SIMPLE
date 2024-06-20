@@ -469,20 +469,18 @@ def load_batched_data(mfgs, node_idx, edge_idx, node_feats, edge_feats, node_gpu
                     b.edata['f'] = srch
     return mfgs
     
-def prepare_input(mfgs, node_feats, edge_feats, plan_edge, plan_node, num_node, num_edge, combine_first=False, pinned=False, nfeat_buffs=None, efeat_buffs=None, nids=None, eids=None):
+def prepare_input_eval(mfgs, node_feats, edge_feats, combine_first=False):
     if node_feats is not None:
         for b in mfgs[0]:
             srch = node_feats[b.srcdata['ID'].long()].float()
             b.srcdata['h'] = srch.cuda()
-   
+    
     if edge_feats is not None:
         for mfg in mfgs:
             for b in mfg:
                 if b.num_src_nodes() > b.num_dst_nodes():
-                    gpu_flag = torch.zeros
                     srch = edge_feats[b.edata['ID'].long()].float()
                     b.edata['f'] = srch.cuda()
-                    
     return mfgs
 
 def init_flags_and_maps(num_node, num_edge, budget, device):
